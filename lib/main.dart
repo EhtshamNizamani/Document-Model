@@ -1,4 +1,3 @@
-import 'package:document_model/screens/documents/document_screen.dart';
 import 'package:document_model/screens/documents/ender_document_details_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const DocumentScreen(),
+      home: const EnterDocumentDetailsScreen(),
     );
   }
 }
