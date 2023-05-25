@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'widget/custom_textfield.dart';
 
@@ -49,14 +50,20 @@ class EnterDocumentDetailsScreen extends StatelessWidget {
                         padding: const EdgeInsets.all(15),
                         child: Row(
                           children: [
-                            SvgPicture.asset(
-                              'assets/images/arrow-left.svg',
+                            InkWell(
+                              onTap: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: SvgPicture.asset(
+                                'assets/images/arrow-left.svg',
+                              ),
                             ),
                             const SizedBox(width: 60),
-                            const Text(
+                            Text(
                               'Add document',
-                              style: TextStyle(
-                                  fontSize: 22, color: Color(0xFFFFC091)),
+                              style: GoogleFonts.inter(
+                                  textStyle: const TextStyle(
+                                      fontSize: 22, color: Color(0xFFFFC091))),
                             ),
                           ],
                         ),
@@ -66,12 +73,13 @@ class EnterDocumentDetailsScreen extends StatelessWidget {
                         color: Color(0xFFFFC091),
                       ),
                       const SizedBox(height: 10),
-                      const Text(
+                      Text(
                         'Enter Your Details',
-                        style: TextStyle(
-                            color: Color(0XFFF7F6F5),
-                            fontSize: 18,
-                            fontWeight: FontWeight.w600),
+                        style: GoogleFonts.inter(
+                            textStyle: const TextStyle(
+                                color: Color(0XFFF7F6F5),
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600)),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 12.0),
@@ -79,10 +87,12 @@ class EnterDocumentDetailsScreen extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Text(
+                              Text(
                                 'First Name',
-                                style: TextStyle(
-                                    fontSize: 16, color: Colors.white),
+                                style: GoogleFonts.inter(
+                                  textStyle: const TextStyle(
+                                      fontSize: 16, color: Colors.white),
+                                ),
                               ),
                               const SizedBox(height: 8),
                               const CustomTextFiled(
@@ -90,10 +100,11 @@ class EnterDocumentDetailsScreen extends StatelessWidget {
                                 title: 'Enter your first name',
                               ),
                               const SizedBox(height: 16),
-                              const Text(
+                              Text(
                                 'Last Name',
-                                style: TextStyle(
-                                    fontSize: 16, color: Colors.white),
+                                style: GoogleFonts.inter(
+                                    textStyle: const TextStyle(
+                                        fontSize: 16, color: Colors.white)),
                               ),
                               const SizedBox(height: 8),
                               const CustomTextFiled(
@@ -101,10 +112,11 @@ class EnterDocumentDetailsScreen extends StatelessWidget {
                                 title: 'Enter your last name',
                               ),
                               const SizedBox(height: 16),
-                              const Text(
+                              Text(
                                 'Date of Birth',
-                                style: TextStyle(
-                                    fontSize: 16, color: Colors.white),
+                                style: GoogleFonts.inter(
+                                    textStyle: const TextStyle(
+                                        fontSize: 16, color: Colors.white)),
                               ),
                               const SizedBox(height: 8),
                               const CustomTextFiled(
@@ -114,10 +126,11 @@ class EnterDocumentDetailsScreen extends StatelessWidget {
                                     'assets/images/arrow-circle-down.svg',
                               ),
                               const SizedBox(height: 16),
-                              const Text(
+                              Text(
                                 'Gender',
-                                style: TextStyle(
-                                    fontSize: 16, color: Colors.white),
+                                style: GoogleFonts.inter(
+                                    textStyle: const TextStyle(
+                                        fontSize: 16, color: Colors.white)),
                               ),
                               const SizedBox(height: 8),
                               const CustomTextFiled(
@@ -127,10 +140,11 @@ class EnterDocumentDetailsScreen extends StatelessWidget {
                                     'assets/images/arrow-circle-down.svg',
                               ),
                               const SizedBox(height: 16),
-                              const Text(
+                              Text(
                                 'Nationality',
-                                style: TextStyle(
-                                    fontSize: 16, color: Colors.white),
+                                style: GoogleFonts.inter(
+                                    textStyle: const TextStyle(
+                                        fontSize: 16, color: Colors.white)),
                               ),
                               const SizedBox(height: 8),
                               const CustomTextFiled(
@@ -154,14 +168,15 @@ class EnterDocumentDetailsScreen extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(30.0),
                                     ),
                                   ),
-                                  child: const Padding(
-                                    padding: EdgeInsets.symmetric(
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
                                         horizontal: 40.0, vertical: 16),
                                     child: Text(
                                       'Continue',
-                                      style: TextStyle(
-                                          fontSize: 18.0,
-                                          color: Color(0xFF260A2F)),
+                                      style: GoogleFonts.inter(
+                                          textStyle: const TextStyle(
+                                              fontSize: 18.0,
+                                              color: Color(0xFF260A2F))),
                                     ),
                                   ),
                                 ),

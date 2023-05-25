@@ -5,6 +5,7 @@ import 'dart:ui';
 import 'package:document_model/screens/documents/tabbar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 
 class DocumentScreen extends StatelessWidget {
@@ -53,7 +54,7 @@ class DocumentScreen extends StatelessWidget {
               child: BackdropFilter(
                 filter: ImageFilter.blur(sigmaX: 2.0, sigmaY: 2.0),
                 child: Container(
-                  height: MediaQuery.of(context).size.height * 0.3,
+                  height: MediaQuery.of(context).size.height * 0.4,
                   decoration: const BoxDecoration(
                       image: DecorationImage(
                           image: AssetImage('assets/images/profile.png'),
@@ -62,23 +63,25 @@ class DocumentScreen extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 170,
+              top: 240,
               left: 0,
               right: 0,
               child: ListTile(
-                title: const Text(
+                title: Text(
                   'Inez Nunez',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 30,
-                      color: Color(0xFFFFC091)),
+                  style: GoogleFonts.inter(
+                      textStyle: const TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 30,
+                          color: Color(0xFFFFC091))),
                 ),
-                subtitle: const Text(
+                subtitle: Text(
                   'Restaurant Operations',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16,
-                      color: Colors.white),
+                  style: GoogleFonts.inter(
+                      textStyle: const TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 16,
+                          color: Colors.white)),
                 ),
                 trailing: InkWell(
                   onTap: () {
@@ -92,22 +95,22 @@ class DocumentScreen extends StatelessWidget {
             ),
             Positioned(
                 top: 30,
-                left: 25,
+                left: 13,
                 child: SvgPicture.asset(
                   'assets/images/arrow-left.svg',
                 )),
             //header section ended
 
             Positioned(
-              bottom: 0,
+              top: MediaQuery.of(context).size.height * 0.38,
               left: 0,
               right: 0,
               child: Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20),
+                    const EdgeInsets.symmetric(horizontal: 13.0, vertical: 20),
                 child: Container(
                   margin: const EdgeInsets.symmetric(vertical: 10),
-                  height: MediaQuery.of(context).size.height * 0.6,
+                  height: MediaQuery.of(context).size.height * 0.5,
                   padding: const EdgeInsets.all(15),
                   decoration: BoxDecoration(
                       color: const Color.fromARGB(120, 47, 46, 41),

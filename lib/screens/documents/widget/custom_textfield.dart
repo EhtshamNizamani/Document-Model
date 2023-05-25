@@ -1,22 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomTextFiled extends StatelessWidget {
   final String title;
   final IconData iconData;
   final String? suffixIcon;
+  final TextInputType? textInputType;
+  final TextEditingController? controller;
   const CustomTextFiled(
-      {Key? key, required this.title, required this.iconData, this.suffixIcon})
+      {Key? key,
+      required this.title,
+      required this.iconData,
+      this.textInputType,
+      this.controller,
+      this.suffixIcon})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: controller,
+      keyboardType: textInputType,
       decoration: InputDecoration(
         // ignore: prefer_const_constructors
-        contentPadding: EdgeInsets.symmetric(vertical: 0.0),
+
+        contentPadding: const EdgeInsets.symmetric(vertical: 0.0),
         hintText: title,
-        hintStyle: const TextStyle(color: Color(0xFFF7F6F5), fontSize: 14),
+        hintStyle: GoogleFonts.inter(
+            textStyle: const TextStyle(color: Color(0xFFF7F6F5), fontSize: 14)),
         suffixIcon: Padding(
           padding: const EdgeInsets.all(12.0),
           child: suffixIcon == null

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HeaderSection extends StatelessWidget {
   const HeaderSection({
@@ -26,20 +27,20 @@ class HeaderSection extends StatelessWidget {
           left: 0,
           right: 0,
           child: ListTile(
-            title: const Text(
-              'Inez Nunez',
-              style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 30,
-                  color: Color(0xFFFFC091)),
-            ),
-            subtitle: const Text(
-              'Restaurant Operations',
-              style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 16,
-                  color: Colors.white),
-            ),
+            title: Text('Inez Nunez',
+                style: GoogleFonts.inter(
+                  textStyle: const TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 30,
+                      color: Color(0xFFFFC091)),
+                )),
+            subtitle: Text('Restaurant Operations',
+                style: GoogleFonts.inter(
+                  textStyle: const TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 16,
+                      color: Colors.white),
+                )),
             trailing: SvgPicture.asset(
               'assets/images/take_pic.svg',
             ),

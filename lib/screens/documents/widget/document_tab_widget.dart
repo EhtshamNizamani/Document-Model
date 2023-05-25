@@ -21,7 +21,7 @@ class DocumentTabWidget extends StatelessWidget {
           SizedBox(height: 10),
           DashBorderContainer(
             svgIcon: 'assets/images/add-circle.svg',
-            title: 'Add Bank Account',
+            title: 'Add Passport',
           ),
           SizedBox(height: 10),
           DetailsCard(),

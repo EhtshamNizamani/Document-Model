@@ -1,6 +1,8 @@
+import 'package:document_model/screens/documents/enter_document_details_screen.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DashBorderContainer extends StatelessWidget {
   final String title;
@@ -30,15 +32,21 @@ class DashBorderContainer extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              SvgPicture.asset(svgIcon),
-              Text(
-                title,
-                style: const TextStyle(
-                  color: Color(0XFFF7F6F5),
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
+              InkWell(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const EnterDocumentDetailsScreen(),
+                    ));
+                  },
+                  child: SvgPicture.asset(svgIcon)),
+              Text(title,
+                  style: GoogleFonts.inter(
+                    textStyle: const TextStyle(
+                      color: Color(0XFFF7F6F5),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  )),
             ],
           ),
         ),
