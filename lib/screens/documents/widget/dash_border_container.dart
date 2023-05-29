@@ -35,7 +35,7 @@ class DashBorderContainer extends StatelessWidget {
               InkWell(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const EnterDocumentDetailsScreen(),
+                      builder: (context) => EnterDocumentDetailsScreen(),
                     ));
                   },
                   child: SvgPicture.asset(svgIcon)),

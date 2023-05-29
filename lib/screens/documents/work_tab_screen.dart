@@ -10,12 +10,14 @@ class WorkTabScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: const [
-        WorkTabWidget(),
-        SizedBox(height: 16),
-        JobDetailsCard(),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        children: const [
+          WorkTabWidget(),
+          SizedBox(height: 16),
+          JobDetailsCard(),
+        ],
+      ),
     );
   }
 }

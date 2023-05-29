@@ -1,15 +1,23 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:ui';
 
+import 'package:document_model/screens/documents/widget/drop_down.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'widget/custom_date_picker.dart';
 import 'widget/custom_textfield.dart';
 
-class EnterDocumentDetailsScreen extends StatelessWidget {
+class EnterDocumentDetailsScreen extends StatefulWidget {
   const EnterDocumentDetailsScreen({super.key});
 
+  @override
+  State<EnterDocumentDetailsScreen> createState() =>
+      _EnterDocumentDetailsScreenState();
+}
+
+class _EnterDocumentDetailsScreenState
+    extends State<EnterDocumentDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -119,12 +127,14 @@ class EnterDocumentDetailsScreen extends StatelessWidget {
                                         fontSize: 16, color: Colors.white)),
                               ),
                               const SizedBox(height: 8),
-                              const CustomTextFiled(
-                                iconData: Icons.calendar_month_outlined,
-                                title: 'Select Date of Birth',
-                                suffixIcon:
-                                    'assets/images/arrow-circle-down.svg',
-                              ),
+
+                              const CustomDatePicker(),
+                              // const CustomTextFiled(
+                              //   iconData: Icons.calendar_month_outlined,
+                              //   title: 'Select Date of Birth',
+                              //   suffixIcon:
+                              //       'assets/images/arrow-circle-down.svg',
+                              // ),
                               const SizedBox(height: 16),
                               Text(
                                 'Gender',
@@ -133,12 +143,7 @@ class EnterDocumentDetailsScreen extends StatelessWidget {
                                         fontSize: 16, color: Colors.white)),
                               ),
                               const SizedBox(height: 8),
-                              const CustomTextFiled(
-                                iconData: Icons.person_2_outlined,
-                                title: 'Select Gender',
-                                suffixIcon:
-                                    'assets/images/arrow-circle-down.svg',
-                              ),
+                              CustomDropdown(),
                               const SizedBox(height: 16),
                               Text(
                                 'Nationality',

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'custom_date_picker.dart';
 import 'custom_textfield.dart';
 
 class PersonalTabWidget extends StatefulWidget {
@@ -53,11 +54,7 @@ class _PersonalTabWidgetState extends State<PersonalTabWidget> {
               ),
             ),
             const SizedBox(height: 8),
-            const CustomTextFiled(
-              iconData: Icons.calendar_month_outlined,
-              title: 'Select Date of Birth',
-              suffixIcon: 'assets/images/arrow-circle-down.svg',
-            ),
+            const CustomDatePicker(),
             const SizedBox(height: 16),
             Text(
               'Mobile',
